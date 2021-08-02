@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width: 100px; height: 100px; margin: 100px auto; background-color: blue;
+         /* transition-property: all; 대상설정 transition-duration: .5s; 진행시간
+        transition-timing-function: ease; 속도곡선지정*/  transition: all .5s ease 1s;
+       /*  transition: .5s; 진행시간*/
+        /* transition-delay: 1s; 지연시간*/ }
+        .box:hover{background-color: red; border-radius: 50%;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform->2d 변형</title>
+    <style>
+        #origin {
+            border: 1px solid #333;
+            float: left;
+            margin: 50px; perspective: 100px;
+        }
+
+        #origin div {
+            width: 350px;
+            height: 200px;
+            transition: all 1s ease;
+        }
+
+        #origin div img {
+            width: 100%;
+        }
+
+        .translate:hover {
+            transform: translate(50px, 50px);
+            opacity: 0.5;
+        }
+
+        .translateX:hover {
+            transform: translateX(-50px);
+        }
+
+        .translateY:hover {
+            transform: translateY(-50px);
+        }
+
+        .translate3D:hover{transform: translate3d(50px, 20px, -300px);}
+        .translateZ:hover{transform: translateZ(-500px);}
+    </style>
+</head>
+
+<body>
+    <div id="origin">
+
+            <div class="translate">
+                <img src="test (1).jpg" alt="베너">
+            </div>       
+            </div> 
+            <div id="origin">
+            <div class="translate3D">
+                <img src="test (1).jpg" alt="베너">
+            </div>
+        </div>
+        <div id="origin">
+            <div class="translateX">
+                <img src="test (1).jpg" alt="베너">
+            </div>
+        </div>
+        <div id="origin">
+            <div class="translateY">
+                <img src="test (1).jpg" alt="베너">
+            </div>
+            </div>
+            <div id="origin">
+                <div class="translateZ">
+                    <img src="test (1).jpg" alt="베너">
+                </div>
+            </div>
+</body>
+
+</html>

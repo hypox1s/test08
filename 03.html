@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform->2d 변형</title>
+    <style>
+        #origin{border: 1px solid #333; float: left;
+            margin: 50px; perspective: 500px;}
+        #origin div{ width: 350px; height: 200px;
+            transition: all 1s ease;
+            transition-property: transform;
+            transition-duration: 0.5s;  
+        }
+        #origin div img{ width: 100%;}
+
+        .translate:hover{transform: translate(50px, 50px); 
+            opacity: 0.5;}
+        .translateX:hover{transform: translateX(-50px);}
+        .translateY:hover{transform: translateY(-50px);}
+
+        .scale:hover{transform: scale(2);}
+        .scaleX:hover{transform: scalex(0.5);}
+        .scaleY:hover{transform: scaley(1.5);}
+
+        .rotateA:hover{transform: rotate(180deg);}
+        .rotateB:hover{transform: rotate(-180deg);}
+
+        .rotateX:hover{transform: rotateX(80deg);}
+        .rotateY:hover{transform: rotateY(80deg);}
+        .rotateZ:hover{transform: rotateZ(80deg);}
+        .rotate3d:hover{transform: rotate3d(1,1,1, 30deg);}
+
+
+    </style>
+</head>
+<body>
+    <div id="origin">
+        <div class="rotateA">
+            <img src="test (1).jpg" alt="베너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotateB">
+            <img src="test (1).jpg" alt="베너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotateX">
+            <img src="test (1).jpg" alt="베너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotateY">
+            <img src="test (1).jpg" alt="베너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotateZ">
+            <img src="test (1).jpg" alt="베너">
+        </div>
+    </div>
+    <div id="origin">
+        <div class="rotate3d">
+            <img src="test (1).jpg" alt="베너">
+        </div>
+    </div>
+</body>
+</html>

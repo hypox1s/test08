@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{border: 0px; padding: 0px;}
+        #wrap{width: 1200px; margin: 0 auto; text-align: center;}
+        h1{text-align: center; text-decoration: underline; margin: 50px 0 30px; 
+            position: relative;}
+        h1::after{content: "";position: absolute; bottom: -5px; left: 50%;
+            width: 200px; height: 2px; background-color: burlywood;
+            transform: translateX(-50%) scaleX(0%);}
+        h1:hover::after{/* width: 200px; transition: width 1s ease; */
+            transform: translateX(-50%) scaleX(100%); transition:  1s ease;}
+        ul{list-style: none;}
+        .list{}
+        .clear::after{clear: both; display: block; content: "";}
+        .list li{width: 350px; height: 200px; float: left; margin-right: 40px; 
+            border: 2px solid #ddd; position: relative;}
+        .list li:last-child{margin-right: 0;}
+        .list li img{width: 100%; transition: .5s;}
+
+        .leftbox{position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+            background-color: rgba(207, 207, 207, 0.7);
+            transform: translateX(-100%) ; transition: transform 1s ease;}
+        .leftbox h3{color: white; padding-top: 70px;}
+        .back h3{color: white; padding-top: 70px;}
+
+        .list li:hover .leftbox{transform: translateX(0);}
+
+        span{border-radius: 50%; width: 50px; height: 50px; border: 3px solid #fff; 
+             line-height: 50px; background-color: white;
+             position: absolute; top: 280px; left: 50%; color: white;
+            transform: translate(-50%,50%) ; transition: top .5s ease;}
+        .list li:nth-child(2):hover span{top: 50%; color: greenyellow;
+            background-color: rgb(224, 5, 151, 0.8);}
+
+        .list li:nth-child(3){perspective: 1000px;}
+        .list li:nth-child(3) .inner{ width: 100%; height: 100%;
+            transform-style: preserve-3d; backface-visibility: visible;
+            transition: 1s;}
+        .list li:nth-child(3) .inner div{position: absolute; left: 0; top: 0;
+            width: 100%; height: 100%; backface-visibility: hidden;}
+        .list li:nth-child(3) .inner .front{}
+        .list li:nth-child(3):hover .inner{-o-transform: rotateY(180deg);}
+        .list li:nth-child(3) .inner .back{background-color: hotpink; color: #fff;
+             text-align: center; line-height: 200px; transform: rotateY(180deg);}
+
+        .btn{display: block; margin: 50px auto; width: 150px; height: 50px;
+            background-color: powderblue; box-shadow: 0 0 0 #ddd;
+            color: #fff; border: none; transition: all 1s ease;}
+        .btn:hover{background-color: aqua; box-shadow: 10px 10px 10px #ddd;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>상품 리스트</h1>
+        <ul class="list clear">
+            <li>
+              <img src="test (1).jpg" alt="베너">
+              <div class="leftbox">
+                <h3>특가상품 바로가기</h3>  
+              </div>  
+            </li>
+            <li>
+              <img src="test (1).jpg" alt="베너">
+              <span>SALE</span>  
+            </li>
+            <li>
+              <div class="inner">
+                 <div class="front">
+                     <img src="test (1).jpg" alt="앞면">
+                 </div>
+                 <div class="back">
+                     <h3>특가상품 바로가기</h3>
+                 </div> 
+              </div>  
+            </li>
+        </ul>
+        <button class="btn">구매하기</button>
+    </div>  
+  </body>
+  </html>
